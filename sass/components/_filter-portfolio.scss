@@ -1,0 +1,44 @@
+.filter__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.filter__item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.filter__button {
+  display: inline-block;
+  border-radius: 4px;
+  border: $accent-color;
+  padding: 10px 32px;
+  background: rgba(245, 244, 250, 1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $secondary-accent-color;
+    background: $accent-color;
+    border-color: $accent-color;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.button__list {
+  color: $title-color;
+  background: $bg-second;
+  text-decoration: none;
+}

@@ -1,0 +1,90 @@
+/* / Особенности  */
+
+.features-list {
+  display: flex;
+  &__item {
+    width: 270px;
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon-antenna {
+    display: inline-flex;
+    height: 120px;
+    width: 270px;
+    background: $bg-second;
+    border-radius: 4px;
+  }
+  &__icon-clock {
+    display: inline-flex;
+    height: 120px;
+    width: 270px;
+    background: $bg-second;
+    border-radius: 4px;
+  }
+  &__icon-diagram {
+    display: inline-flex;
+    height: 120px;
+    width: 270px;
+    background: $bg-second;
+    border-radius: 4px;
+  }
+  &__icon-astronaut {
+    display: inline-flex;
+    height: 120px;
+    width: 270px;
+    background: $bg-second;
+    border-radius: 4px;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text-color;
+  }
+
+  &__card-set {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $bg-second;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon-clock,
+  &__icon-diagram,
+  &__icon-antenna,
+  &__icon-astronaut {
+    width: 70px;
+    height: 70px;
+  }
+}
+.features__title--visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.features-list__title,
+.footer-page__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+#svg-sprite {
+  display: none;
+}

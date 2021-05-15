@@ -1,0 +1,130 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+/* Site-nav */
+.site-nav {
+  position: relative;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 93px;
+}
+
+.site-nav__item {
+  margin-left: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.contact-nav {
+  display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.contact-nav__item {
+  margin-left: 50px;
+}
+
+.site-nav__link,
+.contact-nav__link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  color: $title-color;
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav__link,
+.contact-nav__link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: $title-color;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+/* акцент на текущей странице */
+
+.site-nav__link--current {
+  color: $accent-color;
+  text-decoration: none;
+}
+.site-nav__item {
+  position: relative;
+}
+.site-nav__link--current::after {
+  position: absolute;
+  bottom: -200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  content: "";
+  height: 4px;
+  width: 48px;
+  border-radius: 2px;
+  background-color: $accent-color;
+}
+
+/*// псевдоэлемент нижн подчеркивание */
+.contact-nav__link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.14;
+  color: $text-color;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-nav__icon-evelope {
+  display: block;
+  height: 12px;
+  width: 16px;
+}
+.contact-nav__icon-smartphone {
+  display: block;
+  height: 16px;
+  width: 10px;
+}
+
+.contact-nav__icon-evelope,
+.contact-nav__icon-smartphone {
+  margin-right: 10px;
+  cursor: pointer;
+  fill: currentColor;
+}
+
+.contact-nav__link {
+  &:focus {
+    & .contact-nav__icon-evelope,
+    & .contact-nav__icon-smartphone {
+      color: $accent-color;
+    }
+  }
+}

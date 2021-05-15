@@ -1,0 +1,45 @@
+$var1: #ffffff;
+
+/* / Чем мы занимаемся */
+
+.what-we-do {
+  padding-top: 0;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+.thumb {
+  position: relative;
+  overflow: hidden;
+  background-color: $var1;
+  display: block;
+  .label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $var1;
+  }
+}

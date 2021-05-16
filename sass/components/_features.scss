@@ -1,90 +1,62 @@
-/* / Особенности  */
+/* Особенности  */
 
 .features-list {
-  display: flex;
-  &__item {
-    width: 270px;
-    margin-right: 30px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  @extend %list;
 
-  &__icon-antenna {
-    display: inline-flex;
-    height: 120px;
-    width: 270px;
-    background: $bg-second;
-    border-radius: 4px;
-  }
-  &__icon-clock {
-    display: inline-flex;
-    height: 120px;
-    width: 270px;
-    background: $bg-second;
-    border-radius: 4px;
-  }
-  &__icon-diagram {
-    display: inline-flex;
-    height: 120px;
-    width: 270px;
-    background: $bg-second;
-    border-radius: 4px;
-  }
-  &__icon-astronaut {
-    display: inline-flex;
-    height: 120px;
-    width: 270px;
-    background: $bg-second;
-    border-radius: 4px;
-  }
+  min-width: 320px;
+  min-height: 994px;
+}
 
-  &__text {
-    display: block;
-    margin-top: 0;
+.features-list__item {
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__item:last-child {
     margin-bottom: 0;
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $text-color;
-  }
-
-  &__card-set {
-    display: flex;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-    background-color: $bg-second;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__icon-clock,
-  &__icon-diagram,
-  &__icon-antenna,
-  &__icon-astronaut {
-    width: 70px;
-    height: 70px;
   }
 }
-.features__title--visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+/*  вектор свг*/
+.features-list__card-set {
+  display: block;
+  min-width: 450px;
+  height: 120px;
+  margin-bottom: 30px;
+  padding: 25px 190px;
+  border-radius: 4px;
+
+  background-color: $bg-second;
+  text-align: center;
+  align-items: center;
 }
+
 .features-list__title,
 .footer-page__title {
   margin-top: 0;
   margin-bottom: 10px;
-  text-align: left;
   font-size: 14px;
+
   font-weight: 700;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
+  color: rgba(33, 33, 33, 1);
 }
-#svg-sprite {
-  display: none;
+
+.features-list__text {
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $text-color;
 }
+
+.features-list__icon-clock,
+.features-list__icon-diagram,
+.features-list__icon-antenna,
+.features-list__icon-astronaut {
+  width: 70px;
+  height: 70px;
+}
+
+// Особенности
